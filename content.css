@@ -1,0 +1,18 @@
+#anki-youdao-btn {
+  margin: 6px 0 6px 12px;
+  padding: 5px 14px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #fff;
+  background: #2d8cf0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  vertical-align: middle;
+  transition: background .15s;
+}
+
+#anki-youdao-btn:hover:not(:disabled) { background: #1b6fd6; }
+#anki-youdao-btn:disabled { cursor: default; opacity: .85; }
+#anki-youdao-btn.done { background: #19be6b; }
+#anki-youdao-btn.failed { background: #ed4014; }

@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "有道词典 → Anki",
+  "version": "1.0.0",
+  "description": "在有道词典搜索结果页一键将单词（音标、释义、例句）加入 Anki，基于 AnkiConnect。",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "http://127.0.0.1:8765/",
+    "http://localhost:8765/"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.youdao.com/result*",
+        "*://dict.youdao.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "有道 → Anki 设置"
+  }
+}

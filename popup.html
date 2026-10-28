@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { width: 280px; font-family: -apple-system, "Segoe UI", sans-serif; padding: 14px; margin: 0; font-size: 14px; }
+    h3 { margin: 0 0 12px; font-size: 15px; }
+    label { display: block; margin-bottom: 6px; color: #555; }
+    input { width: 100%; box-sizing: border-box; padding: 6px 8px; border: 1px solid #ccc; border-radius: 5px; margin-bottom: 10px; }
+    button { width: 100%; padding: 7px; border: none; border-radius: 5px; background: #2d8cf0; color: #fff; cursor: pointer; }
+    button:hover { background: #1b6fd6; }
+    #status { margin-top: 10px; font-size: 13px; line-height: 1.5; }
+    .ok { color: #19be6b; }
+    .err { color: #ed4014; }
+    .tip { margin-top: 12px; color: #999; font-size: 12px; line-height: 1.5; border-top: 1px dashed #ddd; padding-top: 8px; }
+  </style>
+</head>
+<body>
+  <h3>有道 → Anki 设置</h3>
+  <label for="deck">导入到牌组：</label>
+  <input id="deck" type="text" placeholder="有道生词">
+  <button id="save">保存设置</button>
+  <button id="ping" style="margin-top:8px">测试 AnkiConnect 连接</button>
+  <div id="status"></div>
+  <div class="tip">首次使用请在 Anki 中安装 AnkiConnect 插件（代码 2055492159）并保持 Anki 运行。</div>
+  <script src="popup.js"></script>
+</body>
+</html>
